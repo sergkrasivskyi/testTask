@@ -4,76 +4,130 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
     <title>Document</title>
   </head>
   <body>
     <div class="wrapper">
       <div class="container">
         <header class="header">
-          <div class="logo"><img src="" alt="" /></div>
-          <nav>
-            <ul>
-              <li><a href=""></a></li>
-              <li><a href=""></a></li>
+          <div class="header__logo">
+            <img src="./images/Logo.svg" alt="Logo image" />
+          </div>
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Users</a>
+              </li>
+              <li><a class="menu__link" href="#">Sign Up</a></li>
             </ul>
           </nav>
         </header>
       </div>
       <article>
         <div class="hero">
-          <div class="hero-txt">
-            <h1>Test assignment for front-end developer</h1>
-            <p class="decription">
+          <div class="hero-article">
+            <h1 class="hero-article__title">
+              Test assignment for front-end developer
+            </h1>
+            <p class="hero-article__text">
               What defines a good front-end developer is one that has skilled
               knowledge of HTML, CSS, JS with a vast understanding of User
               design thinking as they'll be building web interfaces with
               accessibility in mind. They should also be excited to learn, as
               the world of Front-End Development keeps evolving.
             </p>
-            <input type="submit" value="Sign Up" />
+            <label for="hero-sign-up"></label>
+            <input
+              class="button button--hero-sign-up"
+              type="submit"
+              value="Sign Up"
+              id="hero-sign-up"
+            />
           </div>
           <div class="hero-bg">
             <img
               src="./images/pexels-alexandr-podvalny-1227513.jpg"
+              width="1170"
               alt="hero-bg-img"
             />
           </div>
         </div>
       </article>
-      <section class="get-workers">
+      <section class="section-get-workers">
         <div class="container">
-          <h2>Working with GET request</h2>
-          <div class="cards">
-            <div class="card">
-              <img class="card__img" src="" alt="" />
-              <p class="name">Salvador Stewart Flynn Thomas...</p>
-              <p class="function">Frontend Developer Frontend ...</p>
-              <p class="email">frontend_develop@gmail.com</p>
-              <p class="phone">+38 (098) 278 44 24</p>
+					
+          <h2 class="get-workers__title">Working with GET request</h2>
+          <div class="get-workers__cards">
+            <div class="get-workers__cards--item card">
+              <img
+                class="card__img"
+                src="./images/photo-cover.svg"
+                alt="person image"
+              />
+              <p class="card__name">Salvador Stewart Flynn Thomas...</p>
+              <p class="card__function">Frontend Developer Frontend ...</p>
+              <p class="card__email">frontend_develop@gmail.com</p>
+              <p class="card__phone">+38 (098) 278 44 24</p>
             </div>
           </div>
-          <input type="button" value="Show more" />
+          <label for="show-more-button"
+            ><input
+              class="button button--show-more"
+              type="submit"
+              value="Show more"
+              id="show-more-button"
+          /></label>
         </div>
       </section>
-      <section class="post-workers">
+      <section class="section-post-workers">
         <div class="container">
           <form action="#" method="post">
             <h2>Working with POST request</h2>
+            <fieldset name="challenger">
+              <legend>About challenger</legend>
+              <label for="challenger-name"></label>
+              <input
+                type="text"
+                name="challenger"
+                id="challenger-name"
+                placeholder="Your name"
+              />
+              <label for="challenger-email"></label>
+              <input
+                type="email"
+                name="challenger"
+                id="challenger-email"
+                placeholder="Email"
+              />
+              <label for="challenger-tel"></label>
+              <input
+                type="tel"
+                name="challenger"
+                id="challenger-tel"
+                placeholder="Phone"
+              />
+            </fieldset>
             <fieldset>
-							<legend>About challenger</legend>
-              <label for=""><input type="text" /></label>
-              <label for=""><input type="email" name="" id="" /></label>
-              <label for=""><input type="tel" name="" id="" /></label>
+              <legend>Select your position</legend>
+              <input type="radio" name="position" id="front-end-position" />
+              <label for="front-end-position">Frontend developer</label>
+              <input type="radio" name="position" id="back-end-position" />
+              <label for="back-end-position">Backend developer</label>
+              <input type="radio" name="position" id="designer-position" />
+              <label for="designer-position">Designer</label>
+              <input type="radio" name="position" id="qa-position" />
+              <label for="qa-position">QA</label>
             </fieldset>
-            <fieldset name="" id="">
-							<legend>Select your position</legend>
-              <label for=""><input type="radio" name="" id="" /></label>
-              <label for=""><input type="radio" name="" id="" /></label>
-              <label for=""><input type="radio" name="" id="" /></label>
-              <label for=""><input type="radio" name="" id="" /></label>
-            </fieldset>
-            <label for="">Upload<input type="file" name="" id="" placeholder="Upload your photo" /></label>
-            <label for=""><input type="button" value="Sign Up" /></label>
+            <label for="challenger-photo">Upload</label>
+            <input
+              type="file"
+              id="challenger-photo"
+              accept=".jpg, .jpeg, .png, .svg, .ico"
+            />
+            <label for="sign-up"></label>
+            <input class="button button--form-sign-up" type="submit" value="Sign Up" id="sign-up" />
           </form>
         </div>
       </section>
